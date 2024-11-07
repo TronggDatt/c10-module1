@@ -1,0 +1,18 @@
+body{
+    font-family: Verdana;
+    .a{
+        background-color: white;
+    }
+    .b{
+        background-color: black;
+    }
+}
+table{
+    border-collapse: collapse;
+    background-color: orange;
+    width: 100%;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    font-weight: bold;
+}
