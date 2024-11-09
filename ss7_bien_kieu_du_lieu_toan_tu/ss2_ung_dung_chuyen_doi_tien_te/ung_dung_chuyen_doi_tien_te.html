@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+    <link rel="stylesheet" href="chuyen_doi_tien_te.css"></link>
+</head>
+<body>
+<h1>Ứng dụng chuyển đổi tiền tệ</h1>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="type" id="amount" placeholder="Amount">
+        </td>
+        <td>
+            <select id="fromCurrency">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+            </select>
+        </td>
+        <td>
+            <select id="toCurrency">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td id="result"></td>
+    </tr>
+</table>
+<p><button type="button" onClick="chuyen_doi_tien_te()">Chuyển đổi</button></p>
+</body>
+</html>
+<script src="chuyen_doi_tien_te.js"></script>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hiển thị điểm trung bình và tổng của những điểm này</title>
+</head>
+<body>
+<h1>Hệ thống nhập điểm</h1>
+<form id="">
+    <p>
+        <label for="vat_ly">Điểm Vật lý</label>
+        <input type="number" id="vat_ly" step="0.1" min="0" max="10">
+    </p>
+    <p>
+        <label for ="hoc_hoc">Điểm Hoá học </label>
+        <input type="number" id="hoc_hoc" step="0.1" min="0" max="10">
+    </p>
+    <p><label for="sinh_hoc">Điểm Sinh học </label>
+        <input type="number" id="sinh_hoc" step="0.1" min="0" max="10">
+    </p>
+    <button type="button" onClick="tinh_diem()">Tính điểm</button>
+</form>
+<h3>Kết quả:</h3>
+<p id="tong_diem">Tổng điểm:</p>
+<p id="diem_trung_binh">Điểm trung bình:</p>
+
+</body>
+</html>
+<script src="tinh_diem.js"></script>
