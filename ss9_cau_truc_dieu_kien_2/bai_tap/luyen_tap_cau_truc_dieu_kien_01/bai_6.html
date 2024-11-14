@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 6</title>
+</head>
+<body>
+<h3>Tính hoa hồng nhận được theo mức doanh số bán hàng</h3>
+<label for="doanh_thu">Nhập doanh thu bán hàng </label>
+<input type="text" id="doanh_thu" placeholder="m VND"></input>
+<button type="button" onClick="tinh_hoa_hong()">Tính hoa hồng</button>
+<script>
+    function tinh_hoa_hong() {
+        let x = parseFloat(document.getElementById("doanh_thu").value);
+
+        let ty_le;
+
+        if (x === "" || isNaN(x)) {
+            alert("Vui lòng nhập hợp lệ");
+            return;
+        }
+
+
+        if (x > 20) {
+            ty_le = 7;
+        } else if (x>=10 && x <= 20) {
+            ty_le = 5;
+        } else {
+            ty_le = 3;
+        }
+
+        let hoa_hong = (x * ty_le)/100;
+
+        alert("Tý lệ hoa hồng nhận được là: " + ty_le+ ". Và số tiền nhận được là:" + hoa_hong +" m VND");
+    }
+</script>
+</body>
+</html>

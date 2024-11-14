@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 2</title>
+</head>
+<body>
+<h1>Chuyển từ mét sang feet</h1>
+<label for="met">Nhập số m:</label>
+<input type="text" id="met"></input>
+<button type="button" onclick="result()">Kết quả</button>
+<script>
+    function result(){
+        let x = document.getElementById("met").value;
+
+        if(x === "" || isNaN(x)){
+            alert("Vui lòng nhập hợp lệ");
+            return;
+        }
+
+        let ft = x*3.2808;
+
+        alert("feet = " +ft);
+
+    }
+</script>
+</body>
+</html>

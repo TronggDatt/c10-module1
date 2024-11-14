@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 7</title>
+</head>
+<body>
+<h3>Tính cước điện thoại</h3>
+<label for="so_phut">Số phút</label>
+<input type="text" id="so_phut"></input>
+<button type="button" onClick="result()">Tính cước</button>
+<script >
+    function result(){
+        let x=document.getElementById("so_phut").value;
+
+        let phi_cuoc=0;
+
+        if (x === "" || isNaN(x)) {
+            alert("Vui lòng nhập hợp lệ");
+            return;
+        }
+        x=parseInt(x)
+
+        if (x > 200) {
+
+            phi_cuoc = (x-200)*200+150*400+50*600;
+        } else if (x>50) {
+            phi_cuoc = (x-50)*400+50*600;
+        } else {
+            phi_cuoc= so_phut*600;
+        }
+        alert("Phí cước của gia đình bạn là: " + phi_cuoc);
+    }
+</script>
+</body>
+</html>

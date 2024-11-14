@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 8</title>
+</head>
+<body>
+<h1>Kiểm tra một số nhập vào có phải là tuổi một người không</h1>
+<label for="so">Nhập số tuổi: </label>
+<input id="so" type="text"></input>
+<button type="button" onclick="result()">Kiểm tra</button>
+<script>
+    function result() {
+        let a = parseFloat(document.getElementById("so").value);
+
+        if (isNaN(a)) {
+            alert("Vui lòng nhập một số hợp lệ");
+            return;
+        }
+
+        if (!Number.isInteger(a)) {
+            alert("Vui lòng nhập một số nguyên hợp lệ");
+            return;
+        }
+
+        if (a > 0 && a < 120){
+            alert("Số tuổi của bạn là: " + a);
+        } else {
+            alert("Vui lòng nhập lại tuổi");
+        }
+    }
+</script>
+</body>
+</html>

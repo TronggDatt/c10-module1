@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 1</title>
+</head>
+<body>
+<h3>Kiểm tra số a có chia hết cho số b không?</h3>
+<p>
+    <label for="so_a">Nhập số a</label>
+<input type="text" id="so_a"></input>
+</p>
+<p><label for="so_b">Nhập số b</label>
+<input type="text" id="so_b"></input>
+</p>
+<button type="button" onclick="result()">Kết quả</button>
+
+<script>
+    function result(){
+        let a = parseFloat(document.getElementById('so_a').value);
+        let b = parseFloat(document.getElementById('so_b').value);
+
+        if (isNaN(a) || isNaN(b)){
+            alert("Vui lòng nhập số hợp lệ cho a và b");
+            return;
+        }
+
+        if( b === 0){
+            alert ("không thể chia cho 0");
+        } else if (a % b === 0){
+            alert("a chia hết cho b");
+        } else {
+            alert("a không chia hết cho b");
+        }
+    }
+</script>
+</body>
+</html>

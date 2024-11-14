@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 3</title>
+</head>
+<body>
+<h3>Nhập số nguyên bất kì cho biết số đó có lớn hay nhỏ hơn 0</h3>
+<label for="so">Nhập số nguyên bất kỳ:</label>
+<input type="text" id="so">
+<button type="button" onClick="result()">Kiểm tra</button>
+<script>
+    function result(){
+        let x = parseInt(document.getElementById("so").value);
+
+        if (x === "" || isNaN(x)){
+            alert("Vui lòng nhập hợp lệ");
+            return;
+        }
+
+        if (x === 0){
+            alert("Số đó bằng 0");
+        } else if(x > 0){
+            alert("Số đó lớn hơn 0");
+        } else {
+            alert("Số đó nhỏ hơn 0");
+        }
+    }
+</script>
+</body>
+</html>

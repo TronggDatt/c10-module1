@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 6</title>
+</head>
+<body>
+<h1>Giải phương trình bậc 1</h1>
+<p>
+    <label for="so_a">Nhập số a: </label>
+    <input type="text" id="so_a">
+</p>
+<p>
+    <label for="so_b">Nhập số b: </label>
+    <input type="text" id="so_b">
+</p>
+<button type="button" onClick="result()">Kết quả</button>
+<script>
+    function result() {
+        let a = document.getElementById("so_a").value;
+        let b = document.getElementById("so_b").value;
+
+        if (a===""||b==="") {
+            alert("Vui lòng nhập hợp lệ");
+            return;
+        }
+
+        if (a === 0){
+            if(b === 0) {
+                alert("Phương trình có vô số nghiệm");
+            }else{
+                alert("Phương trình vô nghiệm");
+            }
+        } else{
+            let x = -b/a;
+            alert("Phương trình có nghiệm là: " + x);
+        }
+    }
+</script>
+</body>
+</html>

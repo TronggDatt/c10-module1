@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 5</title>
+</head>
+<body>
+<h1>Tính diện tích tam giác vuông khi biết 2 cạnh kề a, b</h1>
+<p>
+    <label for="canh_a">Nhập cạnh a: </label>
+    <input type="text" id="canh_a" name="canh_a"></input>
+</p>
+<p>
+    <label for="canh_b">Nhập cạnh b: </label>
+    <input type="text" id="canh_b" name="canh_b"></input>
+</p>
+<button type="button" onClick="result()">Kết quả</button>
+<script>
+    function result() {
+        var a = document.getElementById("canh_a").value;
+        var b = document.getElementById("canh_b").value;
+
+        if (a === "" || b === "") {
+            alert("Vui lòng nhập số liệu hợp lý");
+            return;
+        }
+
+        let c= (a*b)/2;
+        alert("Diện tích tam giác vuông là: "+c);
+    }
+</script>
+</body>
+</html>

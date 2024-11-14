@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 11</title>
+</head>
+<body>
+<h1>Tính thuế thu nhập cá nhân</h1>
+<label for="thu_nhap">Nhập số tiền thu nhập trong 1 tháng: </label>
+<input type="text" id="thu_nhap" name="thu_nhap"> .000.000 VNĐ</input>
+<button type="button" onClick="result()">Kết quả</button>
+<script>
+    function result() {
+        let tn = parseFloat(document.getElementById("thu_nhap").value);
+
+        if (tn === "" || isNaN(tn)) {
+            alert("Vui lòng nhập đúng số tiền");
+            return;
+        }
+
+        if (!Number.isInteger(tn)) {
+            alert("Vui lòng nhập một số nguyên hợp lệ");
+            return;
+        }
+
+        let thue;
+
+        if (tn > 80) {
+            thue = (tn * 35) / 100 - 9.85;
+        } else if (tn > 52) {
+            thue = (tn * 30) / 100 - 5.85;
+        } else if (tn > 32) {
+            thue = (tn * 25) / 100 - 3.25;
+        } else if (tn > 18) {
+            thue = (tn * 20) / 100 - 1.65;
+        } else if (tn > 10) {
+            thue = (tn * 15) / 100 - 0.75;
+        } else if (tn > 5) {
+            thue = (tn * 10) / 100 - 0.25;
+        } else {
+            thue = (tn * 5) / 100;
+        }
+
+        if (thue > 0) {
+            alert("Số tiền thuế thu nhập cá nhân phải nộp là: " + thue.toLocaleString("vi-VN") + " triệu VNĐ");
+        } else {
+            alert("Thu nhập của bạn không phải đóng thuế.");
+        }
+    }
+</script>
+</body>
+</html>

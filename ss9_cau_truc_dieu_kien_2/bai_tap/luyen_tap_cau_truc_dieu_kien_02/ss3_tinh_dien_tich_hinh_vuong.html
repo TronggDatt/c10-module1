@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 3</title>
+</head>
+<body>
+<h1>Tính diện tích hình vuông khi biết cạnh a</h1>
+<label for="canh">Nhập cạnh a:</label>
+<input type="text" id="canh" name="canh"></input>
+<button type="button" onClick="result()">Kết quả</button>
+<script>
+    function result() {
+        let a=document.getElementById("canh").value;
+
+        if(a===""|| isNaN(a)){
+            alert("Vui lòng nhập số liệu hợp lý");
+            return;
+        }
+        let b= a*4;
+
+        alert("Diện tích hình vuông là: "+b);
+    }
+</script>
+</body>
+</html>

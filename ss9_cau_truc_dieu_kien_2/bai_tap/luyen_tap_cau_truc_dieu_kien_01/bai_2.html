@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 2</title>
+</head>
+<body>
+<h3>Kiểm tra điều kiện vào lớp 10</h3>
+<p>
+    <label for="tuoi">Nhập tuổi của học sinh</label>
+    <input type="text" id="tuoi">
+</p>
+<button type="button" onclick="result()">Kiểm tra</button>
+<script>
+    function result() {
+        let x = parseInt(document.getElementById("tuoi").value);
+
+        if (x==="" || isNaN(x)) {
+            alert("Vui lòng nhập số hợp lệ số tuổi");
+            return;
+        }
+        if (x >= 15) {
+            alert("Bạn đã đủ điều kiện vào 10");
+        } else {
+            alert("Bạn không đủ điều kiện vào 10");
+        }
+    }
+</script>
+</body>
+</html>

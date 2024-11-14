@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 9</title>
+</head>
+<body>
+<h1>Kiểm tra 3 số thực (a, b, c) có phải là canh tam giác</h1>
+<p>
+    <label for = "a">Nhập số a: </label>
+    <input type = "text" name = "a" id = "a"></input>
+</p>
+<p>
+    <label for = "b">Nhập số b: </label>
+    <input type = "text" name = "b" id = "b"></input>
+</p>
+<p>
+    <label for = "c">Nhập số c: </label>
+    <input type = "text" name = "c" id = "c"></input>
+</p>
+<button type="button" onClick="result()">Kiểm tra</button>
+<script>
+    function result(){
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        let c = document.getElementById("c").value;
+
+        if(isNaN(a) || isNaN(b) || isNaN(c)){
+            alert("Nhập số hợp lý");
+        }
+
+        if(a>0 || b>0 || c>0){
+            alert("Đó là một tam giác");
+            return;
+        }
+
+        if (a + b > c && b + c > a && a + c > b) {
+            alert("Đây là một tam giác");
+        } else {
+            alert("Đây không phải là một tam giác");
+        }
+    }
+</script>
+</body>
+</html>

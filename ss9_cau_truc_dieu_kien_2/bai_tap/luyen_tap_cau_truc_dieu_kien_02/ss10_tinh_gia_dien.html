@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 10</title>
+</head>
+<body>
+<h1>Tính giá điện</h1>
+<p>
+    <label for="cong_suat">Nhập công suất tiêu thụ: </label>
+    <input type="text" id="cong_suat" placeholder="kW">
+</p>
+<p>
+    <label for="thoi_gian_ngay">Nhập thời gian sử dụng trong ngày: </label>
+    <input type="text" id="thoi_gian_ngay" placeholder="h">
+</p>
+<p>
+    <label for="thoi_gian_thang">Nhập thời thời gian sử dụng trong tháng: </label>
+    <input type="text" id="thoi_gian_thang" placeholder="ngày">
+</p>
+<p>
+    <label for="gia_dien">Nhập giá 1 số điện: </label>
+    <input type="text" id="gia_dien" placeholder="K VNĐ">
+</p>
+<button type="button" onClick="result()">Kết quả</button>
+<script>
+    function result() {
+        let p = parseFloat(document.getElementById("cong_suat").value);
+        let t = parseFloat(document.getElementById("thoi_gian_ngay").value);
+        let n = parseFloat(document.getElementById("thoi_gian_thang").value);
+        let k = parseFloat(document.getElementById("gia_dien").value);
+
+        if(isNaN(p) || p<=0){
+            alert("Công suất tiêu thụ phải là số dương");
+            return;
+        }
+
+        if(isNaN(t) || t<=0 || t>=24){
+            alert("Thời gian sử dụng trong ngày nằm trong khoảng từ 0-24 giờ");
+            return;
+        }
+
+        if(isNaN(n) || n<=0||n>=31){
+            alert("Thời gian sử dụng trong tháng nằm trong khoảng từ 1-31 ngày");
+            return;
+        }
+
+        if(isNaN(k) || k<=0){
+            alert("Giá 1 số điện phải là số dương");
+            return;
+        }
+
+        let a = p * t * n * k;
+
+        alert("Tiền điện trong 1 tháng của bạn là: "+a +".000 VNĐ");
+    }
+</script>
+</body>
+</html>

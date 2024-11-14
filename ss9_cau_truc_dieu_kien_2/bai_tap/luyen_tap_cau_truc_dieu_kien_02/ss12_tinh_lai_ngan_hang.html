@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 12</title>
+</head>
+<body>
+<h1>Tính lãi ngân hàng</h1>
+<p>
+    <label for="so_tien">Nhập số tiền ban đầu: </label>
+    <input type="text" name="so_tien" id="so_tien"> .000 VNĐ</input>
+</p>
+<p>
+    <label for="so_thang">Nhập số tháng cho vay: </label>
+    <input type="text" id="so_thang"> Tháng</input>
+</p>
+<p>
+    <label for="lai_xuat">Nhập lãi suất cho vay hàng tháng: </label>
+    <input type="text" id="lai_xuat"> %</input>
+</p>
+<button type="button" onClick="result()">Kết quả</button>
+<script>
+    function result() {
+        let amount = parseFloat(document.getElementById("so_tien").value);
+        let month = parseFloat(document.getElementById("so_thang").value);
+        let rate = parseFloat(document.getElementById("lai_xuat").value);
+
+        if(isNaN(amount)||amount<0){
+            alert("Vui lòng nhập đúng số tiền (số tiền nhập vào phải là số dương)");
+            return;
+        }
+
+        if(isNaN(month)||month<0){
+            alert("Vui lòng nhập đúng số tháng (số tháng nhập vào phải là số dương)");
+            return;
+        }
+
+        if(isNaN(rate)||rate<0){
+            alert("Vui lòng nhập đúng lãi xuất (số lãi xuất nhập vào phải là số dương)");
+            return;
+        }
+
+        let tien_goc= amount/month;
+        let tien_lai= ((amount * rate)/100)/month;
+        let tien_lai_goc_lai = tien_goc+tien_lai;
+
+        alert("Số tiền gốc phải trả hàng tháng là: " + tien_goc + ".000 VNĐ"
+            + "\nSố tiền lãi phải trả hàng tháng là: " +tien_lai + ".000 VNĐ"
+            + "\nSố tiền phải trả hàng tháng (cả gốc và lãi) là: " + tien_lai_goc_lai + ".000 VNĐ");
+    }
+</script>
+</body>
+</html>
