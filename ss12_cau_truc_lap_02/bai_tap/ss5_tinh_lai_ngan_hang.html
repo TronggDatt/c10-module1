@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 5</title>
+</head>
+<body>
+<h1>Tính lãi ngân hàng</h1>
+<script>
+    let so_tien = +prompt("Nhập số tiền ban đầu: ");
+    let so_thang = +prompt("Nhập số tháng tính lãi: ");
+    for (let i = 0; i < so_thang; i++) {
+        so_tien = (so_tien * 2) * 0.3 / 100;
+    }
+    document.write("Số tiền có được sau khi lãi là: " + so_tien + " VNĐ");
+
+</script>
+</body>
+</html>
