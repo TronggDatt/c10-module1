@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 2</title>
+</head>
+<body>
+<h1>Hiển thị các số nguyên tố đầu tiên</h1>
+Số nguyên tố là số lớn hơn 1, chỉ chia hết cho 1 và chính nó.
+<div>
+    <label for="so">Nhập số lượng số nguyên tố cần tìm: </label>
+    <input type="text" id="so">
+    <button type="button" onClick="result()">Kiểm tra</button>
+</div>
+<div id="result"></div>
+<script>
+
+    function checkNumber(number) {
+        if (number < 2) return false;
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) return false;
+        }
+        return true;
+    }
+
+    function result() {
+        let number = 2;
+        let count = 0;
+        let n = parseInt(document.getElementById("so").value);
+        let output = document.getElementById("result");
+        output.innerHTML = "";
+
+        if (isNaN(n)||n <= 0){
+            output.innerHTML = "<p>Vui lòng nhập một số nguyên dương hợp lệ!</p>";
+            return;
+        }
+
+        while (count <= n) {
+            if (checkNumber(number)) {
+                output.innerHTML += "<p>" + count + "</p>";
+                count++;
+            }
+            number++;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 2</title>
+</head>
+<body>
+<h1>Lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập</h1>
+<script>
+    let nhiet_do = prompt("Nhập nhiệt độ: ");
+
+    while (nhiet_do > 100 || nhiet_do < 20) {
+        if (nhiet_do > 100) {
+            alert("Yêu cầu người dùng giảm nhiệt độ");
+            nhiet_do = prompt("Nhập nhiệt độ: ");
+        } else if (nhiet_do < 20) {
+            alert("Yêu cầu người dùng tăng nhiệt độ");
+            nhiet_do = prompt("Nhập nhiệt độ: ");
+        }
+    }
+    alert("Nhiệt độ ổn định");
+</script>
+</body>
+</html>

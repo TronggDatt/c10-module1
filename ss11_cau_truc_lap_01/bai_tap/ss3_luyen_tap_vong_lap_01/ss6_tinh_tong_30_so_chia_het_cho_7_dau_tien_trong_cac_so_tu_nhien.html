@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 6</title>
+</head>
+<body>
+<h1>Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên</h1>
+<div id="result"></div>
+<script>
+    function displayResult() {
+        let x = 0;
+        let sum = 0;
+        let count = 0
+
+        while (count < 30) {
+            if (x % 7 === 0 && x !== 0) {
+                sum += x;
+                count++;
+            }
+            x++;
+        }
+        document.getElementById("result").innerHTML = "Tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên là: " + x;
+    }
+
+    displayResult();
+</script>
+</body>
+</html>

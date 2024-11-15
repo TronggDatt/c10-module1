@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 8</title>
+</head>
+<body>
+<h1>Game đoán số</h1>
+<button type="button" onClick="play()">Chơi</button>
+<script>
+    function play() {
+        let min = parseInt(prompt("Nhập giá trị nhỏ nhất trong khoảng bạn muốn đoán: "));
+        let max = parseInt(prompt("Nhập giá trị lớn nhất trong khoảng bạn muốn đoán: "));
+
+        if (isNaN(max) || isNaN(min) || max <= min) {
+            alert("Nhập số không hợp lệ, vui lòng nhập lại")
+            return;
+        }
+
+        let randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+
+        let doan = null;
+        let so_lan_du_doan = 0;
+
+        while (so_lan_du_doan < 3) {
+            doan = parseInt(prompt(`Nhập số bạn đoán trong khoảng ${min} đến ${max}`));
+            so_lan_du_doan++;
+
+            if (isNaN(doan)) {
+                alert("Vui lòng nhập một số hợp lệ");
+            } else if (doan < randomNum) {
+                alert("Số bạn đoán nhỏ hơn")
+            } else if (doan > randomNum) {
+                alert("Số bạn đoán lớn hơn")
+            } else if (doan === randomNum) {
+                alert("Chúc mừng bạn đoán đúng")
+                return;
+            }
+        }
+        alert("Bạn hết 3 lần đoán. Số đúng là: " + randomNum);
+    }
+</script>
+</body>
+</html>
