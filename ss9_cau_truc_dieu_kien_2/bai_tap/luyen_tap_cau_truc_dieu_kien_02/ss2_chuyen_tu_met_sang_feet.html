@@ -12,14 +12,14 @@
 <button type="button" onclick="result()">Kết quả</button>
 <script>
     function result(){
-        let x = document.getElementById("met").value;
+        let met = document.getElementById("met").value;
 
-        if(x === "" || isNaN(x)){
+        if(met === "" || isNaN(met)){
             alert("Vui lòng nhập hợp lệ");
             return;
         }
 
-        let ft = x*3.2808;
+        let ft = met*3.2808;
 
         alert("feet = " +ft);
 

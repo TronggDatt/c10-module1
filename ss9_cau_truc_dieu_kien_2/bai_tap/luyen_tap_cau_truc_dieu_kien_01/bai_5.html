@@ -8,36 +8,36 @@
 <body>
 <h3>Xếp hạng học lực của sinh viên</h3>
 <p>
-    <label for="diem_kt">Điểm bài kiểm tra</label>
-    <input type="text" id="diem_kt"></input>
+    <label for="diemKt">Điểm bài kiểm tra</label>
+    <input type="text" id="diemKt"></input>
 </p>
 <p>
-    <label for="diem_gk">Điểm thi giữa kỳ</label>
-    <input type="text" id="diem_gk"></input>
+    <label for="diemGk">Điểm thi giữa kỳ</label>
+    <input type="text" id="diemGk"></input>
 </p>
 <p>
-    <label for="diem_ck">Điểm thi cuối kỳ</label>
-    <input type="text" id="diem_ck"></input>
+    <label for="diemCk">Điểm thi cuối kỳ</label>
+    <input type="text" id="diemCk"></input>
 </p>
 <button type="button" onClick="result()">Xếp hạng</button>
 <script>
     function result() {
-        let a = parseFloat(document.getElementById("diem_kt").value);
-        let b = parseFloat(document.getElementById("diem_gk").value);
-        let c = parseFloat(document.getElementById("diem_ck").value);
+        let kiemTra = parseFloat(document.getElementById("diemKt").value);
+        let giuaKy = parseFloat(document.getElementById("diemGk").value);
+        let cuoiKy = parseFloat(document.getElementById("diemCk").value);
 
-        let d = (a + b + c) / 3;
+        let tong = (kiemTra + giuaKy + cuoiKy) / 3;
 
-        if(isNaN(a) || isNaN(b) || isNaN(c)){
+        if(isNaN(kiemTra) || isNaN(giuaKy) || isNaN(cuoiKy)){
             alert("Vui lòng nhập hợp lệ các số điểm");
             return;
         }
 
-        if(10.0 <= d < 8.0){
+        if(10.0 <= tong < 8.0){
             alert("Xếp loại Giỏi");
-        } else if(7.9 <= d < 6.5){
+        } else if(7.9 <= tong < 6.5){
             alert("Xếp loại Tiên Tiến");
-        } else if(6.5 <= d < 5.0){
+        } else if(6.5 <= tong < 5.0){
             alert("Xếp loại Trung Bình");
         } else {
             alert("Xếp loại Yếu");

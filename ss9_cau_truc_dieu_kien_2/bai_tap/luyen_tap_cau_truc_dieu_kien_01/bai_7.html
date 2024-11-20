@@ -7,30 +7,30 @@
 </head>
 <body>
 <h3>Tính cước điện thoại</h3>
-<label for="so_phut">Số phút</label>
-<input type="text" id="so_phut"></input>
+<label for="soPhut">Số phút</label>
+<input type="text" id="soPhut"></input>
 <button type="button" onClick="result()">Tính cước</button>
 <script >
     function result(){
-        let x=document.getElementById("so_phut").value;
+        let tongPhut=document.getElementById("soPhut").value;
 
-        let phi_cuoc=0;
+        let phiCuoc=0;
 
-        if (x === "" || isNaN(x)) {
+        if (tongPhut === "" || isNaN(tongPhut)) {
             alert("Vui lòng nhập hợp lệ");
             return;
         }
-        x=parseInt(x)
+        tongPhut=parseInt(tongPhut)
 
-        if (x > 200) {
+        if (tongPhut > 200) {
 
-            phi_cuoc = (x-200)*200+150*400+50*600;
+            phiCuoc = (x-200)*200+150*400+50*600;
         } else if (x>50) {
-            phi_cuoc = (x-50)*400+50*600;
+            phiCuoc = (x-50)*400+50*600;
         } else {
-            phi_cuoc= so_phut*600;
+            phiCuoc= soPhut*600;
         }
-        alert("Phí cước của gia đình bạn là: " + phi_cuoc);
+        alert("Phí cước của gia đình bạn là: " + phiCuoc);
     }
 </script>
 </body>

@@ -12,20 +12,20 @@
 <button type="button" onclick="result()">Kiểm tra</button>
 <script>
     function result() {
-        let a = parseFloat(document.getElementById("so").value);
+        let soTuoi = parseFloat(document.getElementById("so").value);
 
-        if (isNaN(a)) {
+        if (isNaN(soTuoi)) {
             alert("Vui lòng nhập một số hợp lệ");
             return;
         }
 
-        if (!Number.isInteger(a)) {
+        if (!Number.isInteger(soTuoi)) {
             alert("Vui lòng nhập một số nguyên hợp lệ");
             return;
         }
 
-        if (a > 0 && a < 120){
-            alert("Số tuổi của bạn là: " + a);
+        if (soTuoi > 0 && soTuoi < 120){
+            alert("Số tuổi của bạn là: " + soTuoi);
         } else {
             alert("Vui lòng nhập lại tuổi");
         }
