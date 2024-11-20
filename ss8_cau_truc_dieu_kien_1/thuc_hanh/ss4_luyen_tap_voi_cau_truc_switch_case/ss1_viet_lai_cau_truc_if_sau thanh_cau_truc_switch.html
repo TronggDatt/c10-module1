@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 4</title>
+</head>
+<body>
+<h1>Luyện tập với cấu trúc swith-case</h1>
+<script>
+    let brower = prompt("Enter brower name!")
+    // Cau truc if
+    // if(brower == 'Edge'){
+    //     alert("You've got the Edge!");
+    // }else if (browser == 'Chrome' || browser == 'Safari' || browser == 'IE'){
+    //     alert('Okey we support these browers too');
+    // }else {
+    //     alert('We hope that this page looks ok!');
+    // }
+
+
+    // Cau truc switch
+    switch (brower) {
+        case 'Edge':
+            alert("You've got the Edge!");
+            break;
+        case 'Chrome':
+        case 'Safari':
+            alert('Okay we support these browsers too');
+            break;
+        default:
+            alert('We hope that this page looks ok!');
+    }
+</script>
+</body>
+</html>

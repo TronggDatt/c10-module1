@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 3t</title>
+</head>
+<body>
+<h1>Luyen tap</h1>
+<script>
+    let userName = prompt("Who's there?", '');
+    if (userName == 'Admin') {
+        let pass = prompt("Password?", '');
+        if (pass == '123') {
+            alert('Welcome!');
+
+        } else if (userName == null) {
+            alert('Canceled');
+        } else {
+            alert('Wrong password');
+        }
+    } else if (userName == null) {
+        alert("Canceled");
+    } else {
+        alert("I don't know u");
+    }
+</script>
+</body>
+</html>

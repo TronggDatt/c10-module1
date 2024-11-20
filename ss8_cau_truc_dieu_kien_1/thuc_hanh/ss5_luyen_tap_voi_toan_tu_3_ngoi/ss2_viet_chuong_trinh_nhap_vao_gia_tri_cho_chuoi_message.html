@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 2</title>
+</head>
+<body>
+<h1>Viết chương trình nhập vào giá trị cho chuỗi message. </h1>
+<script>
+    let login = prompt("Enter: ");
+    let message = (login == 'Employee') ?
+        'Hello' :
+        (login == 'Dev') ?
+            'Greetings' :
+            (login == '') ?
+                'No login' :
+                '';
+    alert(message);
+</script>
+</body>
+</html>
