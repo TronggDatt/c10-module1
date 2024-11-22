@@ -8,34 +8,34 @@
 <body>
 <h1>Kiểm tra 3 số thực (a, b, c) có phải là canh tam giác</h1>
 <p>
-    <label for = "a">Nhập số a: </label>
-    <input type = "text" name = "a" id = "a"></input>
+    <label for = "soA">Nhập số a: </label>
+    <input type = "text" name = "soA" id = "soA"></input>
 </p>
 <p>
-    <label for = "b">Nhập số b: </label>
-    <input type = "text" name = "b" id = "b"></input>
+    <label for = "soB">Nhập số b: </label>
+    <input type = "text" name = "soB" id = "soB"></input>
 </p>
 <p>
-    <label for = "c">Nhập số c: </label>
-    <input type = "text" name = "c" id = "c"></input>
+    <label for = "soC">Nhập số c: </label>
+    <input type = "text" name = "soC" id = "soC"></input>
 </p>
 <button type="button" onClick="result()">Kiểm tra</button>
 <script>
     function result(){
-        let a = document.getElementById("a").value;
-        let b = document.getElementById("b").value;
-        let c = document.getElementById("c").value;
+        let soA = document.getElementById("soA").value;
+        let soB = document.getElementById("soB").value;
+        let soC = document.getElementById("soC").value;
 
-        if(isNaN(a) || isNaN(b) || isNaN(c)){
+        if(isNaN(soA) || isNaN(soB) || isNaN(soC)){
             alert("Nhập số hợp lý");
         }
 
-        if(a>0 || b>0 || c>0){
+        if(soA>0 || soB>0 || soC>0){
             alert("Đó là một tam giác");
             return;
         }
 
-        if (a + b > c && b + c > a && a + c > b) {
+        if (soA + soB > soC && soB + soC > soA && soA + soC > soB) {
             alert("Đây là một tam giác");
         } else {
             alert("Đây không phải là một tam giác");

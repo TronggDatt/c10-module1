@@ -7,39 +7,39 @@
 </head>
 <body>
 <h1>Tính thuế thu nhập cá nhân</h1>
-<label for="thu_nhap">Nhập số tiền thu nhập trong 1 tháng: </label>
-<input type="text" id="thu_nhap" name="thu_nhap"> .000.000 VNĐ</input>
+<label for="thuNhap">Nhập số tiền thu nhập trong 1 tháng: </label>
+<input type="text" id="thuNhap" name="thuNhap"> .000.000 VNĐ</input>
 <button type="button" onClick="result()">Kết quả</button>
 <script>
     function result() {
-        let tn = parseFloat(document.getElementById("thu_nhap").value);
+        let thuNhap = parseFloat(document.getElementById("thuNhap").value);
 
-        if (tn === "" || isNaN(tn)) {
+        if (thuNhap === "" || isNaN(thuNhap)) {
             alert("Vui lòng nhập đúng số tiền");
             return;
         }
 
-        if (!Number.isInteger(tn)) {
+        if (!Number.isInteger(thuNhap)) {
             alert("Vui lòng nhập một số nguyên hợp lệ");
             return;
         }
 
         let thue;
 
-        if (tn > 80) {
-            thue = (tn * 35) / 100 - 9.85;
-        } else if (tn > 52) {
-            thue = (tn * 30) / 100 - 5.85;
-        } else if (tn > 32) {
-            thue = (tn * 25) / 100 - 3.25;
-        } else if (tn > 18) {
-            thue = (tn * 20) / 100 - 1.65;
-        } else if (tn > 10) {
-            thue = (tn * 15) / 100 - 0.75;
-        } else if (tn > 5) {
-            thue = (tn * 10) / 100 - 0.25;
+        if (thuNhap > 80) {
+            thue = (thuNhap * 35) / 100 - 9.85;
+        } else if (thuNhap > 52) {
+            thue = (thuNhap * 30) / 100 - 5.85;
+        } else if (thuNhap > 32) {
+            thue = (thuNhap * 25) / 100 - 3.25;
+        } else if (thuNhap > 18) {
+            thue = (thuNhap * 20) / 100 - 1.65;
+        } else if (thuNhap > 10) {
+            thue = (thuNhap * 15) / 100 - 0.75;
+        } else if (thuNhap > 5) {
+            thue = (thuNhap * 10) / 100 - 0.25;
         } else {
-            thue = (tn * 5) / 100;
+            thue = (thuNhap * 5) / 100;
         }
 
         if (thue > 0) {

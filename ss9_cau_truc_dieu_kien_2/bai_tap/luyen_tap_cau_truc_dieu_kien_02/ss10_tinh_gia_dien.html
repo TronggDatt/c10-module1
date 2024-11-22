@@ -8,52 +8,52 @@
 <body>
 <h1>Tính giá điện</h1>
 <p>
-    <label for="cong_suat">Nhập công suất tiêu thụ: </label>
-    <input type="text" id="cong_suat" placeholder="kW">
+    <label for="congSuat">Nhập công suất tiêu thụ: </label>
+    <input type="text" id="congSuat" placeholder="kW">
 </p>
 <p>
-    <label for="thoi_gian_ngay">Nhập thời gian sử dụng trong ngày: </label>
-    <input type="text" id="thoi_gian_ngay" placeholder="h">
+    <label for="thoiGianNgay">Nhập thời gian sử dụng trong ngày: </label>
+    <input type="text" id="thoiGianNgay" placeholder="h">
 </p>
 <p>
-    <label for="thoi_gian_thang">Nhập thời thời gian sử dụng trong tháng: </label>
-    <input type="text" id="thoi_gian_thang" placeholder="ngày">
+    <label for="thoiGianThang">Nhập thời thời gian sử dụng trong tháng: </label>
+    <input type="text" id="thoiGianThang" placeholder="ngày">
 </p>
 <p>
-    <label for="gia_dien">Nhập giá 1 số điện: </label>
-    <input type="text" id="gia_dien" placeholder="K VNĐ">
+    <label for="giaDien">Nhập giá 1 số điện: </label>
+    <input type="text" id="giaDien" placeholder="K VNĐ">
 </p>
 <button type="button" onClick="result()">Kết quả</button>
 <script>
     function result() {
-        let p = parseFloat(document.getElementById("cong_suat").value);
-        let t = parseFloat(document.getElementById("thoi_gian_ngay").value);
-        let n = parseFloat(document.getElementById("thoi_gian_thang").value);
-        let k = parseFloat(document.getElementById("gia_dien").value);
+        let congSuat = parseFloat(document.getElementById("congSuat").value);
+        let thoiGianNgay = parseFloat(document.getElementById("thoiGianNgay").value);
+        let thoiGianThang = parseFloat(document.getElementById("thoiGianThang").value);
+        let giaDien = parseFloat(document.getElementById("giaDien").value);
 
-        if(isNaN(p) || p<=0){
+        if(isNaN(congSuat) || congSuat<=0){
             alert("Công suất tiêu thụ phải là số dương");
             return;
         }
 
-        if(isNaN(t) || t<=0 || t>=24){
+        if(isNaN(thoiGianNgay) || thoiGianNgay<=0 || thoiGianNgay>=24){
             alert("Thời gian sử dụng trong ngày nằm trong khoảng từ 0-24 giờ");
             return;
         }
 
-        if(isNaN(n) || n<=0||n>=31){
+        if(isNaN(thoiGianThang) || thoiGianThang<=0||thoiGianThang>=31){
             alert("Thời gian sử dụng trong tháng nằm trong khoảng từ 1-31 ngày");
             return;
         }
 
-        if(isNaN(k) || k<=0){
+        if(isNaN(giaDien) || giaDien<=0){
             alert("Giá 1 số điện phải là số dương");
             return;
         }
 
-        let a = p * t * n * k;
+        let tong = congSuat * thoiGianNgay * thoiGianThang * giaDien;
 
-        alert("Tiền điện trong 1 tháng của bạn là: "+a +".000 VNĐ");
+        alert("Tiền điện trong 1 tháng của bạn là: "+tong +".000 VNĐ");
     }
 </script>
 </body>
