@@ -9,21 +9,46 @@
 <h1>In hình trái tim</h1>
 <pre id="heart"></pre>
 <script>
-    const heartShape = `
-          ******     ******
-         ********   ********
-       *********** ***********
-      *************************
-     ***************************
-       ***********************
-         *******************
-            *************
-              *********
-                *****
-                  *
-        `;
-    document.getElementById('heart').textContent = heartShape;
+    // const heartShape = `
+    //       ******     ******
+    //      ********   ********
+    //    *********** ***********
+    //   *************************
+    //  ***************************
+    //    ***********************
+    //      *******************
+    //         *************
+    //           *********
+    //             *****
+    //               *
+    //     `;
+    // document.getElementById('heart').textContent = heartShape;
 
+    debugger;
+    for (let i = 3; i <= 9; i += 2) {
+        for (let j = 9; j > i; j -= 2) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let k = 1; k <= i; k++) {
+            document.write("*");
+        }
+        for (let j = 9; j > i; j -= 2) {
+            document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+        }
+        for (let k = 1; k <= i; k++) {
+            document.write("*");
+        }
+        document.write("<br/>");
+    }
+    for (let i = 16; i >= 1; i -= 2) {
+        for (let j = 16; j >= i; j -= 2) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let k = 1; k <= i; k++) {
+            document.write("*");
+        }
+        document.write("<br/>");
+    }
 
 </script>
 </body>
