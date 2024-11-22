@@ -49,8 +49,14 @@
         }
         document.write("<br/>");
     }
-    document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*");
 
+    for (let i = 1; i <= 18; i++) {
+        if (i === 18) {
+            document.write("*");
+        } else {
+            document.write("&nbsp;");
+        }
+    }
 </script>
 </body>
 </html>
