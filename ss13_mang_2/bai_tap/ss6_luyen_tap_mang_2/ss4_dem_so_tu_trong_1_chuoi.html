@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 4</title>
+</head>
+<body>
+<h1>Đếm số từ trong một chuỗi</h1>
+<script>
+    let array = prompt("Nhập vào chuỗi: ");
+    count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if ((array[i] >= 'a' && array[i] <= 'z') || (array[i] >= 'A' && array[i] <= 'Z')) {
+            count++;
+        }
+    }
+    document.write("Số ký tự trong chuỗi là: " + count);
+</script>
+</body>
+</html>

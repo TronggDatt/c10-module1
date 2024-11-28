@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 5</title>
+</head>
+<body>
+<h1>Chương trình nhập vào hai chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.</h1>
+<p>Nhập vào chuỗi thứ nhất: <input type="text" id="text1"></p>
+<p>Nhập vào chuỗi thứ hai: <input type="text" id="text2"></p>
+<button onclick="check()">Kiểm tra</button>
+<p id="result"></p>
+<script>
+    function check() {
+        let array1 = document.getElementById("text1").value;
+        let array2 = document.getElementById("text2").value;
+
+        if (array1 === array2) {
+            document.getElementById("result").innerHTML = "Hai chuỗi giống nhau";
+        } else {
+            document.getElementById("result").innerHTML = "Hai chuỗi khác nhau";
+        }
+    }
+</script>
+</body>
+</html>

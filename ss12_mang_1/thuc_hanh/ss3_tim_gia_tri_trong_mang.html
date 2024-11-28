@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 3</title>
+</head>
+<body>
+<script>
+    let value = prompt("Enter a number");
+    let number = [-3, 1, 5, 8, 2, 10];
+    let index = -1;
+    for (let i = 0; i < number.length; i++) {
+        if (value == number[i]) {
+            index = i;
+        }
+    }
+    if (index > -1) {
+        alert("Value " + value + "found at " + index);
+    } else {
+        alert("Value " + value + "found at " + index);
+    }
+</script>
+</body>
+</html>

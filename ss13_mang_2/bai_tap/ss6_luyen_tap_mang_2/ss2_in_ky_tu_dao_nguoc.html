@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 2</title>
+</head>
+<body>
+<h1>Đảo ngược thứ tự</h1>
+<p>Thứ tự ban đầu: <span id="beforeArray"></span></p>
+<p>Đảo ngược: <span id="afterArray"></span></p>
+<script>
+    let array = ['c', 's', 'c', '2', '6', '1'];
+    let BeforeArray = document.getElementById('beforeArray');
+    let AfterArray = document.getElementById('afterArray');
+
+    let BeforeArrayContent = array.join(", ");
+    let AfterArrayContent = array.reverse().join(", ");
+
+    BeforeArray.textContent = BeforeArrayContent;
+    AfterArray.textContent = AfterArrayContent;
+</script>
+</body>
+</html>

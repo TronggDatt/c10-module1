@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 4</title>
+</head>
+<body>
+<center>
+    <h1>Typle anthing slowly</h1>
+    <form name="f">
+        <textarea name="txt" rows="5" cols="50" id="text" onkeyup="typeTextArea()"></textarea></form>
+</center>
+<script>
+    <!--    let array = ['', 'N','G','U','Y','Ễ','N','','T','R','Ọ','N','G','','Đ','Ạ','T'], phanTu = "";-->
+
+    // let array = new Array, phanTu = " ";
+    // array[1] = 'N';
+    // array[2] = 'G';
+    // array[3] = 'U';
+    // array[4] = 'Y';
+    // array[5] = 'Ễ';
+    // array[6] = 'N';
+    // array[7] = ' ';
+    // array[8] = 'T';
+    // array[9] = 'R';
+    // array[10] = 'Ọ';
+    // array[11] = 'N';
+    // array[12] = 'G';
+    // array[13] = ' ';
+    // array[14] = 'Đ';
+    // array[15] = 'Ạ';
+    // array[16] = 'T';
+
+    let array = [
+        'N', 'G', 'U', 'Y', 'Ễ', 'N', ' ',
+        'T', 'R', 'Ọ', 'N', 'G', ' ',
+        'Đ', 'Ạ', 'T', ' '
+    ];
+
+    let index = 0;
+    let outputText = "";
+
+    function typeTextArea() {
+
+        if (index < array.length) {
+            outputText += array[index];
+            document.f.txt.value = outputText;
+            index++;
+        }
+    }
+</script>
+</body>
+</html>

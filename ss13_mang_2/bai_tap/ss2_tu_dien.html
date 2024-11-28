@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 2</title>
+</head>
+<body>
+<h1>Từ điển Anh - Việt</h1>
+<form id="">
+    <label for="word">Nhap tu tieng anh</label>
+    <input type="text" id="word">
+    <button type="button" onclick="translate1()">Dich</button>
+</form>
+<div id="result"></div>
+<script>
+    let englishWords = ["hello", "world", "apple", "dog", "cat"];
+    let vietnameseWords = ["xin chào", "thế giới", "táo", "chó", "mèo"]
+
+    function translate1() {
+        let word = document.getElementById("word").value;
+        let index = englishWords.indexOf(word);
+        let resultElement = document.getElementById("result");
+
+        if (index !== -1) {
+            resultElement.innerText = `Từ Tieng Viet: ${vietnameseWords[index]}`;
+            resultElement.style.color = "green";
+        } else {
+            resultElement.innerText = "Khong tim thay tu nay trong tu dien.";
+            resultElement.style.color = "red";
+        }
+    }
+</script>
+</body>
+</html>

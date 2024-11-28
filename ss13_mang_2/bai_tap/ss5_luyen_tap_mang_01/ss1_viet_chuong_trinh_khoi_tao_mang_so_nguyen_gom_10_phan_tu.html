@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 1</title>
+</head>
+<body>
+<h1>Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có bao nhiêu
+    số nguyên lớn hơn hoặc bằng 10.</h1>
+<p>Mảng số nguyên: <span id="array"></span></p>
+<p>Số lượng phần tử lớn hơn hoặc bằng 10: <span id="count"></span></p>
+<script>
+    const numbers = [5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+    const count = numbers.filter(num => num >= 10).length;
+
+    document.getElementById("array").textContent = numbers.join(", ");
+    document.getElementById("count").textContent = count;
+</script>
+</body>
+</html>

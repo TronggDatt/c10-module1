@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 3</title>
+</head>
+<body>
+<h1>Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong
+    mảng. </h1>
+<p>Mảng ký tự: <span id="arrayContent"></span></p>
+<p>Số ký tự trong mảng <span id="count"></span></p>
+<script>
+    let array = ['a', '1', 'b', '5', 'c', '9', 'd', '0', 'e', '2'];
+
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (!isNaN(array[i] && array[i] !== '')) {
+            count++;
+        }
+    }
+    document.getElementById("arrayContent").textContent = array.join(", ");
+    document.getElementById("count").textContent = count;
+
+</script>
+</body>
+</html>
