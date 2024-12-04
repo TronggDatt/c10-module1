@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 3</title>
+</head>
+<body>
+<h1>Tinh gia thua</h1>
+<script>
+    function tinhGiaiThua(num) {
+        if (num < 0) {
+            return "Khong ton tai giai thua cho mot so am";
+        } else if (num === 0 || num === 1) {
+            return 1;
+        } else {
+            let giaiThua = 1;
+            for (let i = 2; i <= num; i++) {
+                giaiThua *= i;
+            }
+            return giaiThua;
+        }
+    }
+
+    let soNhap = parseInt(prompt("Nhap mot so nguyen: "));
+    if (!isNaN(soNhap)) {
+        let ketQua = tinhGiaiThua(soNhap);
+        alert(`Giai thua cua ${soNhap} la ${ketQua}`);
+    } else {
+        alert('Vui long nhap mot so nguyen hop le');
+    }
+</script>
+</body>
+</html>

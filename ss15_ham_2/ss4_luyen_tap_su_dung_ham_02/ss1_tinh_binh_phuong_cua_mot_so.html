@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai</title>
+</head>
+<body>
+<h1>Tinh binh phuong cua mot so</h1>
+<!--<p>Nhap mot so bat ky <input id="number"></p>-->
+<!--<button onclick="result()">Ket qua</button>-->
+<!--<p id="displayResult"></p>-->
+<script>
+    function tinhBinhPhuong(num) {
+        return num * num;
+    }
+
+    let soNhap = prompt("Nhap mot so: ");
+    let ketQua = tinhBinhPhuong(Number(soNhap));
+    alert(`Binh phuong cua so ${soNhap} la ${ketQua}`);
+</script>
+</body>
+</html>

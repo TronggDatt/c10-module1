@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 9</title>
+</head>
+<body>
+<h1>Kiem tra xem ky tu bat ky co nam trong mang khong</h1>
+<script>
+    function kiemTraKyTuTrongMang(mang, kyTu) {
+        let soLanXuatHien = mang.filter(item => item === kyTu).length;
+        return soLanXuatHien > 0 ? soLanXuatHien : -1;
+    }
+
+    let mangKyTu = prompt("Nhap mang ky tu (cac ky tu cach nhau bang dau phay): ").split(',').map(item => item.trim());
+
+    let kyTuNhap = prompt("Nhap ky tu can kiem tra: ");
+
+    let ketQua = kiemTraKyTuTrongMang(mangKyTu, kyTuNhap);
+    if (ketQua !== -1) {
+        alert(`Ky tu "${kyTuNhap}" xuat hien ${ketQua}`);
+    } else {
+        alert(`Ky tu ${kyTuNhap} khong co trong mang`);
+    }
+</script>
+</body>
+</html>
