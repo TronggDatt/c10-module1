@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 3</title>
+</head>
+<body>
+<h1>Tim gia tri min cua mang</h1>
+<script>
+    function minArray(array) {
+        let min = array[0];
+        for (var i = 1; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+        return min;
+    }
+
+    let array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let min = minArray(array1);
+    alert(min);
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 6</title>
+</head>
+<body>
+<h1>Kiem tra tu doi xung</h1>
+<script>
+    function isPalindrome(s) {
+        s = s.replace(/\s/g, '').toLowerCase();
+
+        if (s.length <= 1) {
+            return true;
+        }
+
+        if (s[0] === s[s.length - 1]) {
+            return isPalindrome(s.slice(1, s.length - 1));
+        } else {
+            return false;
+        }
+    }
+
+    const tuNhap = prompt("Nhập một từ hoặc chuỗi:");
+    if (isPalindrome(tuNhap)) {
+        alert(`${tuNhap} la mot tu doi xung palindrome`);
+    } else {
+        alert(`${tuNhap} khong phai la mot tu doi xung`);
+    }
+</script>
+</body>
+</html>

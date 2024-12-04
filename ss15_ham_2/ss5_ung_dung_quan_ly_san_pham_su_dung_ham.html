@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 5</title>
+</head>
+<body>
+<h1>Ung dung quan ly san pham su dung ham</h1>
+<form onsubmit="addProduct(); return false;">
+    <p>Add New Product</p>
+    <input type="text" id="newProduct" placeholder="New Product">
+    <button type="submit">Add</button>
+</form>
+<p>Display All Product<span id=""></span></p>
+<div id="productTable"></div>
+
+
+<script>
+    let products = ["Iphone X", "Samsung Galaxy"];
+    let productCount = 0;
+
+    function displayProducts() {
+        let table = document.getElementById("productTable");
+        let rows = "<table border=\"1\" style=\"width: 100%; text-align: left;\">\n" +
+            "    <tr>\n" +
+            "        <th colspan=\"3\">Product Name</th>\n" +
+            "    </tr>\n"
+        products.forEach((product, index) => {
+            rows += `    <tr>
+                            <th>${product}</th>
+                            <th><button onclick="editProduct(${index})">Edit</button></th>
+                            <th><button onclick="deleteProduct(${index})">Delete</button></th>
+                        </tr>`;
+        });
+        rows += "</table>";
+        table.innerHTML = rows;
+    }
+
+    function addProduct() {
+        let newProduct = document.getElementById("newProduct").value.trim();
+        if (newProduct) {
+            products.push(newProduct);
+            productCount++;
+            displayProducts();
+            document.getElementById("newProduct").value = "";
+            alert("Product added successfully");
+        } else {
+            alert("Pls enter a product name");
+        }
+    }
+
+    function editProduct(index) {
+        let updateProduct = prompt("Update product name: " + products[index]);
+        if (updateProduct) {
+            products[index] = updateProduct.trim();
+            displayProducts();
+            alert("Product updated successfully");
+        }
+    }
+
+    function deleteProduct(index) {
+        if (confirm("Are you sure you want to delete this product?")) {
+            products.splice(index, 1);
+            displayProducts();
+            alert("Product removed successfully");
+        }
+    }
+
+    displayProducts();
+
+
+</script>
+</body>
+</html>

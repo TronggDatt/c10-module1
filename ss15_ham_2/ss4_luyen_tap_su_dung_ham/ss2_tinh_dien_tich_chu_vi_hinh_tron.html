@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 2</title>
+</head>
+<body>
+<h1>Tinh dien tich, chu vi hinh tron</h1>
+<script>
+    function tinhDienTich(banKinh) {
+        return Math.PI * Math.pow(banKinh, 2);
+    }
+
+    function tinhChuVi(banKinh) {
+        return 2 * Math.PI * banKinh;
+    }
+
+    let banKinh = prompt("Nhap ban kinh hinh tron: ");
+    if (banKinh > 0) {
+        let dienTich = tinhDienTich(banKinh);
+        let chuVi = tinhChuVi(banKinh);
+        alert(`Dien tich hinh tron la: ${dienTich} \nChu vi hinh tron: ${chuVi}`);
+    } else {
+        alert('Ban kinh phai la so lon hon 0');
+    }
+</script>
+</body>
+</html>

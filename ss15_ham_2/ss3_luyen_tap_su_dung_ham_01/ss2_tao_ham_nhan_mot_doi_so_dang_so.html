@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài 2</title>
+</head>
+<body>
+<h1>Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm</h1>
+<p>Nhập một số: <input type="number" id="inputNum"></p>
+<button onclick="displayResult()">Tăng giá trị</button>
+<p id="result"></p>
+<script>
+    function increment(number) {
+        return number + 1;
+    }
+
+    function displayResult() {
+        let input = document.getElementById("inputNum").value;
+
+        if (!isNaN(input)) {
+            let Result = increment(input);
+            document.getElementById("result").innerHTML = "Kết quả sau khi tăng: " + Result;
+        } else {
+            document.getElementById("result").innerHTML = "Vui lòng nhập một số hợp lệ";
+        }
+    }
+</script>
+</body>
+</html>

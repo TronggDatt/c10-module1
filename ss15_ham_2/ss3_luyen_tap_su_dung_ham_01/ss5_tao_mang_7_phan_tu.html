@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 5</title>
+</head>
+<body>
+<h1>Tao mang voi 7 phan tu</h1>
+<script>
+    let starts = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellations = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Minor", "Leo"];
+
+    function findConstellation(starName) {
+        let index = starts.indexOf(starName);
+        if (index > -1) {
+            return constellations[index];
+        } else {
+            return null;
+        }
+    }
+
+    let ngoiSao = prompt("Nhap ten ngoi sao: ");
+    let chomSao = findConstellation(ngoiSao);
+
+    if (chomSao) {
+        document.write("Ngoi sao " + ngoiSao + " thuoc chom sao: " + chomSao);
+    } else {
+        document.write("Khong tim thay ngoi sao co ten: " + ngoiSao);
+    }
+</script>
+</body>
+</html>

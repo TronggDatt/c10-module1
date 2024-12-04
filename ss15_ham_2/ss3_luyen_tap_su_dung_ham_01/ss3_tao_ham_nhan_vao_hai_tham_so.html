@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 3</title>
+</head>
+<body>
+<h1>Tao ham nhan vao hai tham so</h1>
+<p>Nhap so thu nhat: <input type="number" id="number1"></p>
+<p>Nhap so thu hai: <input type="number" id="number2"></p>
+<button onclick="result()">Ket qua</button>
+<p id="displayResult"></p>
+<script>
+    function compare(number1, number2) {
+        if (number1 > number2) {
+            alert("Tham so thu nhat lon lon tham so thu hai")
+        } else {
+            return number1 + number2;
+        }
+    }
+
+    function result() {
+        let number1 = document.getElementById("number1").value;
+        let number2 = document.getElementById("number2").value;
+        let Result = compare(number1, number2);
+        document.getElementById("displayResult").innerHTML = "Tong cua hai tham so la: " + Result;
+    }
+</script>
+</body>
+</html>

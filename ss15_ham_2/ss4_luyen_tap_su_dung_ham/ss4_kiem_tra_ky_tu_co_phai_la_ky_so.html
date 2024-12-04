@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 4</title>
+</head>
+<body>
+<h1>Kiem tra xem ky tu nhap co phai la ky tu so</h1>
+<script>
+    function kiemTraKyTuSo(kyTu) {
+        return !isNaN(kyTu) && kyTu.trim() !== "";
+    }
+
+    let kyTuNhap = prompt("Nhap mot ky tu: ");
+    if (kiemTraKyTuSo(kyTuNhap)) {
+        alert(`${kyTuNhap} la mot ky tu so`);
+    } else {
+        alert(`${kyTuNhap} khong phai la mot ky tu so`);
+    }
+</script>
+</body>
+</html>
