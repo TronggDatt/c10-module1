@@ -31,29 +31,29 @@
         let thoiGianThang = parseFloat(document.getElementById("thoiGianThang").value);
         let giaDien = parseFloat(document.getElementById("giaDien").value);
 
-        if(isNaN(congSuat) || congSuat<=0){
+        if (isNaN(congSuat) || congSuat <= 0) {
             alert("Công suất tiêu thụ phải là số dương");
             return;
         }
 
-        if(isNaN(thoiGianNgay) || thoiGianNgay<=0 || thoiGianNgay>=24){
+        if (isNaN(thoiGianNgay) || thoiGianNgay <= 0 || thoiGianNgay >= 24) {
             alert("Thời gian sử dụng trong ngày nằm trong khoảng từ 0-24 giờ");
             return;
         }
 
-        if(isNaN(thoiGianThang) || thoiGianThang<=0||thoiGianThang>=31){
+        if (isNaN(thoiGianThang) || thoiGianThang <= 0 || thoiGianThang >= 31) {
             alert("Thời gian sử dụng trong tháng nằm trong khoảng từ 1-31 ngày");
             return;
         }
 
-        if(isNaN(giaDien) || giaDien<=0){
+        if (isNaN(giaDien) || giaDien <= 0) {
             alert("Giá 1 số điện phải là số dương");
             return;
         }
 
         let tong = congSuat * thoiGianNgay * thoiGianThang * giaDien;
 
-        alert("Tiền điện trong 1 tháng của bạn là: "+tong +".000 VNĐ");
+        alert("Tiền điện trong 1 tháng của bạn là: " + tong + ".000 VNĐ");
     }
 </script>
 </body>

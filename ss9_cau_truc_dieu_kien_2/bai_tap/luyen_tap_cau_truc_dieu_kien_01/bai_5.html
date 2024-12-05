@@ -28,16 +28,16 @@
 
         let tong = (kiemTra + giuaKy + cuoiKy) / 3;
 
-        if(isNaN(kiemTra) || isNaN(giuaKy) || isNaN(cuoiKy)){
+        if (isNaN(kiemTra) || isNaN(giuaKy) || isNaN(cuoiKy)) {
             alert("Vui lòng nhập hợp lệ các số điểm");
             return;
         }
 
-        if(10.0 <= tong < 8.0){
+        if (10.0 <= tong < 8.0) {
             alert("Xếp loại Giỏi");
-        } else if(7.9 <= tong < 6.5){
+        } else if (7.9 <= tong < 6.5) {
             alert("Xếp loại Tiên Tiến");
-        } else if(6.5 <= tong < 5.0){
+        } else if (6.5 <= tong < 5.0) {
             alert("Xếp loại Trung Bình");
         } else {
             alert("Xếp loại Yếu");

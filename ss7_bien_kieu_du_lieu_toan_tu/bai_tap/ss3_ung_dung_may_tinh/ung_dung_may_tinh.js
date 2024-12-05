@@ -1,25 +1,25 @@
-function add(){
+function add() {
     let a = parseFloat(document.getElementById('a').value);
     let b = parseFloat(document.getElementById('b').value);
 
     document.getElementById('result').innerText = 'Result: ' + (a + b);
 }
 
-function sub(){
+function sub() {
     let a = parseFloat(document.getElementById('a').value);
     let b = parseFloat(document.getElementById('b').value);
 
     document.getElementById('result').innerText = 'Result: ' + (a - b);
 }
 
-function mul(){
+function mul() {
     let a = parseFloat(document.getElementById('a').value);
     let b = parseFloat(document.getElementById('b').value);
 
     document.getElementById('result').innerText = 'Result: ' + (a * b);
 }
 
-function div(){
+function div() {
     let a = parseFloat(document.getElementById('a').value);
     let b = parseFloat(document.getElementById('b').value);
 

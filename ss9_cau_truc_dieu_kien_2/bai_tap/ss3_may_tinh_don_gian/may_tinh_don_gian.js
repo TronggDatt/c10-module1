@@ -1,4 +1,4 @@
-function set(a){
+function set(a) {
     document.getElementById("view").value += a;
 }
 
@@ -7,6 +7,7 @@ function result() {
     var result = eval(Exp.value);
     Exp.value = result;
 }
+
 function del() {
     var elem = document.getElementById("view").value;
     var length = elem.length;

@@ -11,17 +11,17 @@
 <input type="text" id="met"></input>
 <button type="button" onclick="result()">Kết quả</button>
 <script>
-    function result(){
+    function result() {
         let met = document.getElementById("met").value;
 
-        if(met === "" || isNaN(met)){
+        if (met === "" || isNaN(met)) {
             alert("Vui lòng nhập hợp lệ");
             return;
         }
 
-        let ft = met*3.2808;
+        let ft = met * 3.2808;
 
-        alert("feet = " +ft);
+        alert("feet = " + ft);
 
     }
 </script>

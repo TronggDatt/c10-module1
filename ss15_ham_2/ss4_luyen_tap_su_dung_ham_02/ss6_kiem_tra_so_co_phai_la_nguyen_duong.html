@@ -8,15 +8,16 @@
 <body>
 <h1>Kiem tra so dua vao co phai la nguyen duong</h1>
 <script>
-    function kiemTraSoNguyenDuong(number){
-        return Number.isInteger(number) && number >0;
+    function kiemTraSoNguyenDuong(number) {
+        return Number.isInteger(number) && number > 0;
     }
+
     let soNhap = parseFloat(prompt("Nhap mot so: "));
 
-    if (!isNaN(soNhap)){
-        if (kiemTraSoNguyenDuong(soNhap)){
+    if (!isNaN(soNhap)) {
+        if (kiemTraSoNguyenDuong(soNhap)) {
             alert(`${soNhap} la mot so nguyen duong`);
-        }else{
+        } else {
             alert(`${soNhap} khong phai la mot so nguyen duong`);
         }
     } else {

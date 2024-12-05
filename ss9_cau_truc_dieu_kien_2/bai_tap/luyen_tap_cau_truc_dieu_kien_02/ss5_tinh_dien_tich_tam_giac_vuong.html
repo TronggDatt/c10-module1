@@ -18,16 +18,16 @@
 <button type="button" onClick="result()">Kết quả</button>
 <script>
     function result() {
-        var a = document.getElementById("canh_a").value;
-        var b = document.getElementById("canh_b").value;
+        let a = document.getElementById("canh_a").value;
+        let b = document.getElementById("canh_b").value;
 
         if (a === "" || b === "") {
             alert("Vui lòng nhập số liệu hợp lý");
             return;
         }
 
-        let c= (a*b)/2;
-        alert("Diện tích tam giác vuông là: "+c);
+        let c = (a * b) / 2;
+        alert("Diện tích tam giác vuông là: " + c);
     }
 </script>
 </body>

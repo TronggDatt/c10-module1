@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 2</title>
+</head>
+<body>
+<h1>Xay dung lop mo ta Temperature</h1>
+<p id="result"></p>
+<script>
+    class Temperature {
+        constructor(celsius) {
+            if (celsius < -273) {
+                throw new Error("Nhiet do khong the thap hon -273 do C");
+            }
+            this.celsius = celsius;
+        }
+
+        toFahrenheit() {
+            return (this.celsius * 9 / 5) + 32;
+        }
+
+        toKelvin() {
+            return this.celsius + 273.15;
+        }
+    }
+
+    let temperature = new Temperature(25);
+    // console.log(`Nhiet do C la: ${temperature.celsius} \nNhiet do F la: ${temperature.toFahrenheit()} \nNhiet do K la: ${temperature.toKelvin()}`);
+
+    document.getElementById("result").innerHTML = `Nhiet do C la: ${temperature.celsius} <br> Nhiet do F la: ${temperature.toFahrenheit()} <br> Nhiet do K la: ${temperature.toKelvin()}`;
+</script>
+</body>
+</html>

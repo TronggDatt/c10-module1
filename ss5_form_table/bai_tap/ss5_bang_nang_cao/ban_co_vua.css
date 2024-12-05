@@ -1,13 +1,16 @@
-body{
+body {
     font-family: Verdana;
-    .a{
+
+    .a {
         background-color: white;
     }
-    .b{
+
+    .b {
         background-color: black;
     }
 }
-table{
+
+table {
     border-collapse: collapse;
     background-color: orange;
     width: 100%;

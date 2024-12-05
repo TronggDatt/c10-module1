@@ -7,30 +7,38 @@ table {
     border: 1px solid black;
     text-align: center;
 }
+
 th, td {
     border: 1px solid #6a6a6a;
 }
-.a{
+
+.a {
     background-color: red;
     color: white
 }
-.b{
+
+.b {
     background-color: orange;
-    color:white
+    color: white
 }
-.c{
+
+.c {
     background-color: blue;
-    color:white
+    color: white
 }
-.d{
-    color:red
+
+.d {
+    color: red
 }
-.e{
-    color:blue
+
+.e {
+    color: blue
 }
-h2.table{
+
+h2.table {
     font-family: Arial, Helvetica, sans-serif;
 }
-sub{
-    color:black
+
+sub {
+    color: black
 }

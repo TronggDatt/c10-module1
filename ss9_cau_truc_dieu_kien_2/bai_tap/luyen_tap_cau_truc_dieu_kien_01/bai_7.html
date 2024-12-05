@@ -10,25 +10,25 @@
 <label for="soPhut">Số phút</label>
 <input type="text" id="soPhut"></input>
 <button type="button" onClick="result()">Tính cước</button>
-<script >
-    function result(){
-        let tongPhut=document.getElementById("soPhut").value;
+<script>
+    function result() {
+        let tongPhut = document.getElementById("soPhut").value;
 
-        let phiCuoc=0;
+        let phiCuoc = 0;
 
         if (tongPhut === "" || isNaN(tongPhut)) {
             alert("Vui lòng nhập hợp lệ");
             return;
         }
-        tongPhut=parseInt(tongPhut)
+        tongPhut = parseInt(tongPhut)
 
         if (tongPhut > 200) {
 
-            phiCuoc = (x-200)*200+150*400+50*600;
-        } else if (x>50) {
-            phiCuoc = (x-50)*400+50*600;
+            phiCuoc = (x - 200) * 200 + 150 * 400 + 50 * 600;
+        } else if (x > 50) {
+            phiCuoc = (x - 50) * 400 + 50 * 600;
         } else {
-            phiCuoc= soPhut*600;
+            phiCuoc = soPhut * 600;
         }
         alert("Phí cước của gia đình bạn là: " + phiCuoc);
     }

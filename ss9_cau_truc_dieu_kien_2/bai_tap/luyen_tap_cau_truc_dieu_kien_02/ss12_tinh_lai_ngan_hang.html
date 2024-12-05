@@ -26,27 +26,27 @@
         let month = parseFloat(document.getElementById("soThang").value);
         let rate = parseFloat(document.getElementById("laiXuat").value);
 
-        if(isNaN(amount)||amount<0){
+        if (isNaN(amount) || amount < 0) {
             alert("Vui lòng nhập đúng số tiền (số tiền nhập vào phải là số dương)");
             return;
         }
 
-        if(isNaN(month)||month<0){
+        if (isNaN(month) || month < 0) {
             alert("Vui lòng nhập đúng số tháng (số tháng nhập vào phải là số dương)");
             return;
         }
 
-        if(isNaN(rate)||rate<0){
+        if (isNaN(rate) || rate < 0) {
             alert("Vui lòng nhập đúng lãi xuất (số lãi xuất nhập vào phải là số dương)");
             return;
         }
 
-        let tienGoc= amount/month;
-        let tienLai= ((amount * rate)/100)/month;
-        let tienLaiGocLai = tienGoc+tienLai;
+        let tienGoc = amount / month;
+        let tienLai = ((amount * rate) / 100) / month;
+        let tienLaiGocLai = tienGoc + tienLai;
 
         alert("Số tiền gốc phải trả hàng tháng là: " + tienGoc + ".000 VNĐ"
-            + "\nSố tiền lãi phải trả hàng tháng là: " +tienLai + ".000 VNĐ"
+            + "\nSố tiền lãi phải trả hàng tháng là: " + tienLai + ".000 VNĐ"
             + "\nSố tiền phải trả hàng tháng (cả gốc và lãi) là: " + tienLaiGocLai + ".000 VNĐ");
     }
 </script>

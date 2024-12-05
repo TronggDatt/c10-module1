@@ -1,13 +1,15 @@
-body{
+body {
     font-family: Verdana;
     color: cornflowerblue;
 }
-button{
+
+button {
     width: 25px;
     height: 25px;
     color: cornflowerblue;
 }
-input{
+
+input {
     color: cornflowerblue;
     width: 110px;
     height: 20px;

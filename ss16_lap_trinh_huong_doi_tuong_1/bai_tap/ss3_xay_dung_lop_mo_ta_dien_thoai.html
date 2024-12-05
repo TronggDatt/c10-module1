@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 3</title>
+</head>
+<body>
+<h1>Xay dung lop mo ta dien thoai</h1>
+<div id="result"></div>
+<script>
+    class Mobile {
+        constructor(brand) {
+            this.tenDienThoai = brand;
+            this.trangThaiPin = 100; // trạng thái pin
+            this.tinNhanDangSoan = ""; // tin nhắn đang soạn
+            this.tinNhanDen = []; // hộp thư đến
+            this.tinNhanDaGui = []; // tin nhắn đã gửi
+            this.tinhTrangMayBat = false; // trạng thái bật/tắt
+        }
+
+        mayDangBat() {
+            return this.tinhTrangMayBat;
+        }
+
+        batMay() {
+            if (this.trangThaiPin > 0) {
+                this.tinhTrangMayBat = true;
+                this.hienThiTinNhan(`${this.tenDienThoai} đang bật.`);
+            } else {
+                this.hienThiTinNhan(`${this.tenDienThoai} không đủ pin.`);
+            }
+        }
+
+        tatMay() {
+            this.tinhTrangMayBat = false;
+            this.hienThiTinNhan(`${this.tenDienThoai} đã tắt.`);
+        }
+
+        sacPin() {
+            this.trangThaiPin = 100;
+            this.hienThiTinNhan(`${this.tenDienThoai} đã sạc đầy pin.`);
+        }
+
+        soanTinNhan(tinNhan) {
+            if (!this.mayDangBat()) {
+                this.hienThiTinNhan(`${this.tenDienThoai} đang tắt. Không thể soạn tin nhắn.`);
+            }
+            this.tinNhanDangSoan = tinNhan;
+            this.hienThiTinNhan(`${this.tenDienThoai} đang soạn tin nhắn: "${tinNhan}".`);
+        }
+
+        hopThuDen({nguoiNhan, tinNhan}) {
+            if (this.tatMay) {
+                this.hienThiTinNhan(`${this.tenDienThoai} đang TẮT. Không thể nhận tin nhắn.`);
+            } else {
+                this.tinNhanDen.push({nguoiNhan, tinNhan});
+                this.hienThiTinNhan(`${this.tenDienThoai} nhận được tin nhắn từ ${nguoiNhan}: "${tinNhan}".`);
+            }
+        }
+
+
+        guiTinNhan(nguoiNhan) {
+            if (this.tatMay) {
+                this.hienThiTinNhan(`${this.tenDienThoai} đang TẮT. Không thể gửi tin nhắn.`);
+            } else if (this.tinNhanDangSoan === "") {
+                this.hienThiTinNhan(`${this.tenDienThoai} không có tin nhắn nào để gửi.`);
+            } else {
+                nguoiNhan.hopThuDen({nguoiNhan: this.tenDienThoai, tinNhan: this.tinNhanDangSoan});
+                this.tinNhanDaGui.push(this.tinNhanDangSoan);
+                this.tinNhanDangSoan = ""; // Xóa tin nhắn đang soạn
+                this.hienThiTinNhan(`${this.tenDienThoai} đã gửi tin nhắn.`);
+            }
+        }
+
+        hienThiTinNhan(tinNhan) {
+            let ketQua = document.getElementById("result");
+            ketQua.innerHTML = `${tinNhan} <br>` + ketQua.innerHTML;
+        }
+    }
+
+    let iPhone = new Mobile("iPhone");
+    let samSung = new Mobile("Samsung");
+
+    iPhone.batMay();
+    iPhone.soanTinNhan("Hello Samsung");
+    iPhone.guiTinNhan(samSung);
+
+    samSung.batMay();
+    samSung.hopThuDen(iPhone);
+
+
+</script>
+</body>
+</html>
