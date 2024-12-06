@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 3</title>
+</head>
+<body>
+<h1>Su tuong tac cong tac va bong den</h1>
+<script>
+    class Lamp {
+        constructor() {
+            this.lampStatus = false;
+        }
+
+        turnOn() {
+            this.lampStatus = true;
+        }
+
+        turnOff() {
+            this.lampStatus = false;
+        }
+    }
+
+    class Switch {
+        constructor() {
+            this.switchStatus = false;
+            this.lamp = null;
+        }
+
+        connectLamp(lamp) {
+            this.lamp = lamp;
+        }
+
+        switchOn() {
+            if (this.lamp == null) {
+                console.log("chưa kết nối")
+            } else {
+                this.switchStatus = true;
+                this.lamp.turnOn();
+            }
+
+        }
+
+        switchOff() {
+            if (this.lamp == null) {
+                console.log("chưa kết nối")
+            } else {
+                this.switchStatus = false;
+                this.lamp.turnOff();
+            }
+
+        }
+    }
+
+    let bongDen = new Lamp();
+    let congTac = new Switch();
+    congTac.connectLamp(bongDen);
+
+    console.log("-----------------bất công tác -----------")
+    congTac.switchOn();
+    console.log(bongDen.lampStatus);
+
+
+    console.log("-----------------tắt công tác -----------")
+    congTac.switchOff();
+    console.log(bongDen.lampStatus)
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bai 2</title>
+</head>
+<body>
+<h1>Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva</h1>
+<script>
+    class Apple {
+        constructor() {
+            this.weight = 10;
+        }
+
+        decrease() {
+            if (this.weight > 0) {
+                this.weight--;
+            }
+        }
+
+        isEmpty() {
+            if (this.weight === 0) {
+                return true;
+            }
+            return false;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getGender() {
+            return this.gender
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        checkApple(tao) {
+            // return !tao.isEmpty()
+            if (tao.isEmpty()) {
+                return false;
+            }
+            return true;
+        }
+
+        eatApple(tao) {
+            if (this.checkApple(tao)) {
+                this.weight++;
+                tao.decrease();
+            } else {
+                console.log(this.name + ": Hết táo rồi")
+            }
+        }
+
+        say(message) {
+            console.log(this.name + ": " + message)
+        }
+    }
+
+    let tao = new Apple();
+    let adam = new Human("ADAM", true, 50);
+    let eva = new Human("EVA", false, 40);
+
+    adam.say("Em ăn táo đi");
+    eva.say("Em không đói bụng");
+    adam.say("Em không ăn thì anh ăn vậy");
+    adam.eatApple(tao);
+    adam.say("Ngon lắm, em ăn đi");
+    eva.eatApple(tao);
+    eva.eatApple(tao);
+    eva.eatApple(tao);
+    eva.eatApple(tao);
+    eva.eatApple(tao);
+    eva.eatApple(tao);
+    eva.eatApple(tao);
+    eva.eatApple(tao);
+    eva.eatApple(tao);
+    adam.eatApple(tao);
+    console.log(adam.weight)
+    console.log(eva.weight)
+    console.log(tao.getWeight())
+</script>
+</body>
+</html>
