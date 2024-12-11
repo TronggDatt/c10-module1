@@ -15,49 +15,93 @@
 <p id="result"></p>
 <canvas id="myCanvas" width="500" height="500"></canvas>
 <script>
-    function Rectangle(length, width) {
-        this.length = length;
-        this.width = width;
+    // function Rectangle(length, width) {
+    //     this.length = length;
+    //     this.width = width;
+    // }
+    //
+    // Rectangle.prototype.getArea = function () {
+    //     return this.length * this.width;
+    // }
+    //
+    // Rectangle.prototype.getPerimeter = function () {
+    //     return 2 * (this.length + this.width);
+    // }
+    //
+    // Rectangle.prototype.draw = function (canvasId) {
+    //     let canvas = document.getElementById(canvasId);
+    //     let ctx = canvas.getContext("2d");
+    //
+    //     let canvasWidth = canvas.width;
+    //     let canvasHeight = canvas.height;
+    //
+    //     let lengthScale = canvasWidth / this.length;
+    //     let widthScale = canvasHeight / this.length;
+    //     let scale = Math.min(lengthScale, widthScale);
+    //
+    //     let scaledLength = this.length * scale;
+    //     let scaledWidth = this.width * scale;
+    //
+    //
+    //     ctx.clearRect(0, 0, canvas.length, canvas.width);
+    //     ctx.fillStyle = "red";
+    //     ctx.fillRect(50, 30, scaledLength, scaledWidth);
+    // }
+    //
+    // document.getElementById('drawButton').addEventListener('click', function () {
+    //     let length = parseInt(document.getElementById('lengthInput').value);
+    //     let width = parseInt(document.getElementById('widthInput').value);
+    //
+    //     let rectangle = new Rectangle(length, width);
+    //
+    //     document.getElementById('result').innerHTML = `Dien tich hcn la: ${rectangle.getArea()} <br>Chu vi hcn la: ${rectangle.getPerimeter()}`;
+    //     rectangle.draw('myCanvas');
+    // });
+
+    //es6
+
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        getArea() {
+            return this.length * this.width;
+        }
+
+        getPerimeter() {
+            return 2 * (this.length + this.width);
+        }
+
+        draw(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext("2d");
+
+            const canvasWidth = canvas.width;
+            const canvasHeight = canvas.height;
+
+            const lengthScale = canvasWidth / this.length;
+            const widthScale = canvasHeight / this.width;
+            const scale = Math.min(lengthScale, widthScale);
+
+            const scaledLength = this.length * scale;
+            const scaledWidth = this.width * scale;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "red";
+            ctx.fillRect(50, 30, scaledLength, scaledWidth);
+        }
     }
+    document.getElementById('drawButton').addEventListener('click', () => {
+        const length = parseInt(document.getElementById('lengthInput').value);
+        const width = parseInt(document.getElementById('widthInput').value);
 
-    Rectangle.prototype.getArea = function () {
-        return this.length * this.width;
-    }
+        const rectangle = new Rectangle(length, width);
 
-    Rectangle.prototype.getPerimeter = function () {
-        return 2 * (this.length + this.width);
-    }
-
-    Rectangle.prototype.draw = function (canvasId) {
-        let canvas = document.getElementById(canvasId);
-        let ctx = canvas.getContext("2d");
-
-        let canvasWidth = canvas.width;
-        let canvasHeight = canvas.height;
-
-        let lengthScale = canvasWidth / this.length;
-        let widthScale = canvasHeight / this.length;
-        let scale = Math.min(lengthScale, widthScale);
-
-        let scaledLength = this.length * scale;
-        let scaledWidth = this.width * scale;
-
-
-        ctx.clearRect(0, 0, canvas.length, canvas.width);
-        ctx.fillStyle = "red";
-        ctx.fillRect(50, 30, scaledLength, scaledWidth);
-    }
-
-    document.getElementById('drawButton').addEventListener('click', function () {
-        let length = parseInt(document.getElementById('lengthInput').value);
-        let width = parseInt(document.getElementById('widthInput').value);
-
-        let rectangle = new Rectangle(length, width);
-
-        document.getElementById('result').innerHTML = `Dien tich hcn la: ${rectangle.getArea()} <br>Chu vi hcn la: ${rectangle.getPerimeter()}`;
+        document.getElementById('result').innerHTML = `Diện tích HCN là: ${rectangle.getArea()} <br>Chu vi HCN là: ${rectangle.getPerimeter()}`;
         rectangle.draw('myCanvas');
     });
-
 </script>
 </body>
 </html>
